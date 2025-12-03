@@ -24,13 +24,29 @@
             font-weight: bold;
         }
 
+        .branding {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .branding h1 {
+            margin: 0;
+        }
+
+
+        .nav-image img {
+            height: 60px;
+            width: auto;
+        }
+
         .container {
             max-width: 900px;
             margin: 40px auto;
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
@@ -54,7 +70,8 @@
             gap: 20px;
         }
 
-        form input, form textarea {
+        form input,
+        form textarea {
             width: 100%;
             padding: 12px;
             border-radius: 6px;
