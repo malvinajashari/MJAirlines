@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    
+    //login validation
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
         loginForm.addEventListener("submit", (e) => {
@@ -24,11 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (isValid) {
-                alert("Login successful (front-end only)");
+                window.location.href = "index.html";
             }
         });
     }
 
+    //signup validation
     const registerForm = document.getElementById("registerForm");
     if (registerForm) {
         registerForm.addEventListener("submit", (e) => {
@@ -70,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (isValid) {
-                alert("Registration successful (front-end only)");
+                window.location.href = "login.html";
             }
         });
     }
