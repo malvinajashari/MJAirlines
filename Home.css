@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; /* stretch to full screen */
+  background: url("_.jpeg") center/cover no-repeat;
+  z-index: -1; /* behind everything */
+  
+  transform: rotate(0deg); /* rotate here */
+  /* OR animate */
+  /* animation: roll 20s linear infinite; */
+}
+
+@keyframes roll {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+ header{
+     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1px;
+
+}
+header ul{
+     display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.headeri{
+    display: flex;
+    align-items: flex-start;
+}
+main{
+     padding: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.search{
+ background-color: cornflowerblue;
+}
+ header ul li button:hover {
+  background-color: #2176b5; /* darker blue on hover */
+}
+  
