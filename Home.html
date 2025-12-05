@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="Home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airline Homepage</title>
+  <link rel="stylesheet" href="assets/css/Home.css">
 </head>
 <body>
-    <header>
-        <div class="headeri">
-            <img src="logo.png" height="45px" >
-            <div class="catalog"> 
-                <p>MJ AirLines</p>
-            </div>
-        </div>
-        <ul>
-            <button>Home</button>
-            <button>About</button>
-            <button>Offers</button>
-            <button>Contact</button>
-        </ul>
-    </header>
-    <main>
-        <div class="type">
-            <input type="text" placeholder="Flight Type" style="height: 50px; width: 613px;">
-        </div>
-        <br>
-        <div class="bgfoto">
-            <input type="text" placeholder="From" style="height: 50px; width: 300px;">
-            <input type="text" placeholder="To" style="height: 50px; width: 300px;">
-        </div>
-        <div class="date">
-            <input type="text" placeholder="Leaving Date" style="height: 50px; width: 300px;">
-            <input type="text" placeholder="Return Date" style="height: 50px; width: 300px;">
-        </div>
-        <div class="search">
-            <button type="button" aria-placeholder="Search" style="height: 50px; width: 613px;">Search</button>
-        </div>
-        </main>
-        <div></div>
+  <header>MJ Airlines</header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Flights</a>
+    <a href="#">Destinations</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="slider">
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <div class="slides" id="slides">
+      <div class="slide" style="background-image: url('assets/images/airplane.jpeg');"></div>
+      <div class="slide" style="background-image: url('assets/images/planet.jpeg');"></div>
+      <div class="slide" style="background-image: url('assets/images/landscape.avif');"></div>
+    </div>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+
+  <div class="content">
+    <h2>Welcome Aboard</h2>
+    <p>Your journey begins here. Explore the world with comfort and confidence.</p>
+  </div>
+
+  <section class="destinations">
+    <h2>Popular Destinations</h2>
+
+    <div class="dest-row">
+      <img src="assets/images/paris.jpeg" class="dest-img" />
+      <div class="dest-text">
+        <h3>Paris, France</h3>
+        <p>The city of lights awaits with its romantic atmosphere, rich culture, and world-famous landmarks such as the Eiffel Tower and Louvre Museum.</p>
+      </div>
+    </div>
+
+    <div class="dest-row reverse">
+      <img src="assets/images/tokyo.jpeg" class="dest-img" />
+      <div class="dest-text">
+        <h3>Tokyo, Japan</h3>
+        <p>A perfect blend of tradition and technology, Tokyo draws travelers with its neon-lit streets, ancient temples, and unparalleled cuisine.</p>
+      </div>
+    </div>
+
+    <div class="dest-row">
+      <img src="assets/images/usa.jpeg" class="dest-img" />
+      <div class="dest-text">
+        <h3>New York, USA</h3>
+        <p>The city that never sleeps offers iconic sights like Times Square, Central Park, and skyscrapers that define the modern skyline.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SkyBlue Airlines. All Rights Reserved.
+  </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
