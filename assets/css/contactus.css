@@ -1,112 +1,104 @@
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(to bottom, #e3f2fd, #ffffff);
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f8ff;
+    color: #003366;
+}
 
-        .header {
-            background-color: #0d6efd;
-            color: white;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+header {
+    background: #005bbb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
 
-        .header h1 {
-            margin: 0;
-        }
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #004a99;
+    padding: 10px;
+}
 
-        .header .nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .branding {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+nav a.active {
+    text-decoration: underline;
+}
 
-        .branding h1 {
-            margin: 0;
-        }
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+h2 {
+    color: #005bbb;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .nav-image img {
-            height: 60px;
-            width: auto;
-        }
+.contact-info {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.contact-info span {
+    font-weight: bold;
+}
 
-        h2 {
-            color: #0d6efd;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
-        .contact-info {
-            margin-bottom: 30px;
-            line-height: 1.8;
-        }
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
 
-        .contact-info p span {
-            font-weight: bold;
-        }
+textarea {
+    height: 120px;
+    resize: none;
+}
 
-        form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+.full-width {
+    grid-column: span 2;
+}
 
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 15px;
-        }
+button {
+    grid-column: span 2;
+    background: #005bbb;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
 
-        form textarea {
-            height: 120px;
-            resize: none;
-        }
+button:hover {
+    background: #003f88;
+}
 
-        .full-width {
-            grid-column: span 2;
-        }
-
-        button {
-            grid-column: span 2;
-            background-color: #0d6efd;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #084bbb;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background-color: #f1f1f1;
-        }
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #003366;
+    color: white;
+    margin-top: 40px;
+}
