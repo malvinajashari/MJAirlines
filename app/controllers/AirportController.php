@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../models/AirportModel.php';
 require_once __DIR__ . '/../controllers/AuthController.php';
+require_once __DIR__ . '/../helpers/validation.php';
 
 class AirportController {
     private $model;

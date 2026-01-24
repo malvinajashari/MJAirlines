@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../models/TicketModel.php';
+require_once __DIR__ . '/../helpers/validation.php';
 
 class TicketController {
     private $ticketModel;
