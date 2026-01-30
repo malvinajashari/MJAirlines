@@ -2,9 +2,9 @@
 
 class Database {
     private $host = "localhost";
-    private $db_name = "mjairline"; 
-    private $username = "root";     
-    private $password = "";         
+    private $db_name = "mjairlines";
+    private $username = "root";
+    private $password = "root";
     public $conn;
 
     public function connect() {
@@ -12,7 +12,7 @@ class Database {
 
         try {
             $this->conn = new PDO(
-                "mysql:host=" . $this->host . ";dbname=" . $this->db_name,
+                "mysql:host={$this->host};dbname={$this->db_name};charset=utf8mb4",
                 $this->username,
                 $this->password
             );
@@ -20,11 +20,9 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         } catch (PDOException $exception) {
-            echo "Connection error: " . $exception->getMessage();
+            die("Connection error: " . $exception->getMessage());
         }
 
         return $this->conn;
     }
 }
-
-?>

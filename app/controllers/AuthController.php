@@ -3,8 +3,12 @@ require_once __DIR__ . '/../models/UserModel.php';
 require_once __DIR__ . '/../helpers/validation.php';
 
 class AuthController {
+    private UserModel $userModel;
+
     public function __construct() {
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $this->userModel = new UserModel();
     }
 
@@ -14,37 +18,37 @@ class AuthController {
 
         if (!isRequired($email) || !isEmail($email) || !isRequired($password)) {
             $_SESSION['error'] = "Invalid email or password";
-            header("Location: ../public/login.php");
+            header("Location: http://localhost:8888/MJAirlines/public/login.php");
             exit();
         }
 
         $user = $this->userModel->findByEmail($email);
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
-            $_SESSION['role'] = $user['role'];
+            $_SESSION['role'] = strtolower($user['role']); // store role as lowercase
 
-            if ($user['role'] === 'admin') {
-                header("Location: ../public/dashboard/admin.php");
+            if ($_SESSION['role'] === 'admin') {
+                header("Location: http://localhost:8888/MJAirlines/public/dashboard/admin.php");
             } else {
-                header("Location: ../public/dashboard/user.php");
+                header("Location: http://localhost:8888/MJAirlines/public/home.php"); // normal user goes to home
             }
             exit();
         } else {
             $_SESSION['error'] = "Incorrect email or password";
-            header("Location: ../public/login.php");
+            header("Location: http://localhost:8888/MJAirlines/public/login.php");
             exit();
         }
     }
 
     public function logout() {
         session_destroy();
-        header("Location: ../public/login.php");
+        header("Location: http://localhost:8888/MJAirlines/public/login.php");
         exit();
     }
 
     public function checkLogin() {
         if (!isset($_SESSION['user_id'])) {
-            header("Location: ../public/login.php");
+            header("Location: http://localhost:8888/MJAirlines/public/login.php");
             exit();
         }
     }

@@ -1,19 +1,32 @@
+<?php
+require_once __DIR__ . '/../app/controllers/AuthController.php';
+
+$auth = new AuthController();
+$auth->checkLogin();
+
+if ($auth->currentUserRole() === 'admin') {
+    header("Location: http://localhost:8888/MJAirlines/public/dashboard/admin.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Airline Homepage</title>
+  <title>MJ Airlines - Home</title>
   <link rel="stylesheet" href="assets/css/Home.css">
 </head>
 <body>
   <header>MJ Airlines</header>
 
   <nav>
-    <a href="Home.html">Home</a>
+    <a href="home.php">Home</a>
     <a href="#">Flights</a>
     <a href="aboutus.html">About Us</a>
     <a href="contactus.html">Contact Us</a>
+    <a href="logout.php" class="logout-btn">Logout</a>
   </nav>
 
   <div class="slider">
@@ -63,6 +76,6 @@
     &copy; 2025 MJ Airlines. All Rights Reserved.
   </footer>
 
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

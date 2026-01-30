@@ -1,16 +1,13 @@
 <?php
 session_start();
-
 require_once __DIR__ . '/../app/controllers/AuthController.php';
 
-$auth = new AuthController();
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $auth->login($email, $password);
+    $auth = new AuthController();
+    $auth->login($_POST['email'] ?? '', $_POST['password'] ?? '');
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="bg-light">
 
-<div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-md-5 bg-white p-4 rounded shadow">
+
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h3 class="m-0">Login</h3>
             <img src="assets/images/logo.png" alt="Logo" class="form-logo">
@@ -31,28 +29,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <?php
         if (isset($_SESSION['error'])) {
-            echo "<div class='alert alert-danger'>".$_SESSION['error']."</div>";
+            echo "<div class='alert alert-danger'>{$_SESSION['error']}</div>";
             unset($_SESSION['error']);
         }
         ?>
 
-        <form id="loginForm" method="POST" action="login.php">
+        <form method="POST">
+
             <div class="mb-3">
                 <label>Email Address</label>
-                <input type="email" class="form-control" name="email" id="loginEmail" required>
+                <input type="email" name="email" class="form-control" placeholder="Enter email" required>
             </div>
 
             <div class="mb-3">
                 <label>Password</label>
-                <input type="password" class="form-control" name="password" id="loginPassword" required>
+                <input type="password" name="password" class="form-control" placeholder="Enter password" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Login</button>
+            <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+
+            <div class="text-center">
+                <span>Don’t have an account?</span>
+                <a href="signup.php" class="fw-bold text-decoration-none">Sign up</a>
+            </div>
+
         </form>
+
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/validation.js"></script>
 </body>
 </html>
