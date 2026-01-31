@@ -24,7 +24,7 @@ if ($auth->currentUserRole() === 'admin') {
     <h1 style="margin: 0; font-size: 2rem; font-family: 'Arial', sans-serif; letter-spacing: 1px;">MJ Airlines</h1>
     <nav style="margin-top: 10px;">
       <a href="home.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Home</a>
-      <a href="#" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Flights</a>
+      <a href="flights.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Flights</a>
       <a href="aboutus.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">About Us</a>
       <a href="contactus.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Contact Us</a>
       <a href="account.php" style="color: #ffeb3b; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">My Account</a>

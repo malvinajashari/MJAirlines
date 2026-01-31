@@ -19,11 +19,6 @@
     ('MJ202', 2, 3, '2026-03-02 10:00:00', '2026-03-02 13:00:00', 300.00, 95),
     ('MJ303', 1, 3, '2026-03-03 09:00:00', '2026-03-03 18:00:00', 510.00, 110);
 
-    INSERT INTO news (title, content)
-    VALUES
-    ('New Routes for 2026!', 'MJ Airlines is excited to announce brand new international destinations.'),
-    ('Holiday Discounts', 'Save up to 40% on selected flights this holiday season.');
-
     INSERT INTO messages (name, email, subject, message)
     VALUES
     ('Emily White', 'emily@example.com', 'Booking Help', 'I need assistance with my ticket.'),
