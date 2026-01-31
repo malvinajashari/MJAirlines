@@ -86,8 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Edit User</h1>
     <nav>
         <a href="users.php">Back to Users</a>
-        <a href="../../public/home.php">Home</a>
-        <a href="../../public/logout.php" class="logout-btn">Logout</a>
     </nav>
 </header>
 

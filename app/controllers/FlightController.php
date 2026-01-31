@@ -4,8 +4,8 @@ require_once __DIR__ . '/AuthController.php';
 require_once __DIR__ . '/../helpers/validation.php';
 
 class FlightController {
-    private $flightModel;
-    private $auth;
+    public $flightModel;
+    public $auth;
 
     public function __construct() {
         $this->flightModel = new FlightModel();

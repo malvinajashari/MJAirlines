@@ -91,8 +91,6 @@ form button:hover {
     <h1>Edit Airport</h1>
     <nav>
         <a href="airport.php">Back to Airports</a>
-        <a href="../../public/home.php">Home</a>
-        <a href="../../public/logout.php" class="logout-btn">Logout</a>
     </nav>
 </header>
 

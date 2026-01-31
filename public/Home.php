@@ -5,7 +5,7 @@ $auth = new AuthController();
 $auth->checkLogin();
 
 if ($auth->currentUserRole() === 'admin') {
-    header("Location: http://localhost/MJAirlines/public/dashboard/admin.php");
+    header("Location: http://localhost/MJAirlines/public/dashboard/users.php");
     exit();
 }
 ?>

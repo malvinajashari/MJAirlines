@@ -77,7 +77,7 @@ th, td {
     <h1>Admin Dashboard - Airports</h1>
     <nav>
         <a href="users.php">Users</a>
-        <a href="../home.php">Home</a>
+        <a href="flights.php">Flights</a>
         <a href="../logout.php" class="logout-btn">Logout</a>
     </nav>
 </header>

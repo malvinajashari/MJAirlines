@@ -132,7 +132,7 @@
         <h1>Admin Dashboard - Users</h1>
         <nav>
             <a href="airport.php">Airports</a>
-            <a href="../../public/home.php">Home</a>
+            <a href="flights.php">Flights</a>
             <a href="../../public/logout.php" class="logout-btn">Logout</a>
         </nav>
     </header>
