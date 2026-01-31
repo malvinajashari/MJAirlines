@@ -78,6 +78,7 @@ th, td {
     <nav>
         <a href="users.php">Users</a>
         <a href="flights.php">Flights</a>
+        <a href="messages.php">Messages</a>
         <a href="../logout.php" class="logout-btn">Logout</a>
     </nav>
 </header>

@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../config/Database.php';
 
 class MessageModel {
-    private $conn;
+    public $conn;
 
     public function __construct() {
         $db = new Database();

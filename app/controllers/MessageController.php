@@ -4,8 +4,8 @@ require_once __DIR__ . '/../controllers/AuthController.php';
 require_once __DIR__ . '/../helpers/validation.php';
 
 class MessageController {
-    private $model;
-    private $auth;
+    public $model;
+    public $auth;
 
     public function __construct() {
         $this->model = new MessageModel();

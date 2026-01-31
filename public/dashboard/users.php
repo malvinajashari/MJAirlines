@@ -133,6 +133,7 @@
         <nav>
             <a href="airport.php">Airports</a>
             <a href="flights.php">Flights</a>
+            <a href="messages.php">Messages</a>
             <a href="../../public/logout.php" class="logout-btn">Logout</a>
         </nav>
     </header>
