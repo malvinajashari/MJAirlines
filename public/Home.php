@@ -19,16 +19,20 @@ if ($auth->currentUserRole() === 'admin') {
   <link rel="stylesheet" href="assets/css/Home.css">
 </head>
 <body>
-  <header>MJ Airlines</header>
+  <header style="background: linear-gradient(90deg, #005bbb, #0073e6); color: white; padding: 20px; border-radius: 0 0 20px 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+    <h1 style="margin: 0; font-size: 2rem; font-family: 'Arial', sans-serif; letter-spacing: 1px;">MJ Airlines</h1>
+    <nav style="margin-top: 10px;">
+      <a href="home.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Home</a>
+      <a href="#" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Flights</a>
+      <a href="aboutus.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">About Us</a>
+      <a href="contactus.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Contact Us</a>
+      <a href="account.php" style="color: #ffeb3b; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">My Account</a>
+      <a href="logout.php" style="color: #ffeb3b; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Logout</a>
+    </nav>
+  </div>
+</header>
 
-  <nav>
-    <a href="home.php">Home</a>
-    <a href="#">Flights</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="contactus.html">Contact Us</a>
-    <a href="account.php" class="account-btn">My Account</a>
-    <a href="logout.php" class="logout-btn">Logout</a>
-  </nav>
 
   <div class="slider">
     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>

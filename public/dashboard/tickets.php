@@ -39,9 +39,9 @@ table th, table td {
 <header>
     <h1>Tickets Dashboard</h1>
     <nav>
-        <a href="home.php">Home</a>
         <a href="users.php">Users</a>
         <a href="flights.php">Flights</a>
+        <a href="messages.php" class="active">Messages</a>
         <a href="../../public/logout.php" class="logout-btn">Logout</a>
     </nav>
 </header>

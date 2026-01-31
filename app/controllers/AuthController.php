@@ -67,4 +67,19 @@ class AuthController {
     public function currentUserRole() {
         return $_SESSION['role'] ?? null;
     }
+
+    public function currentUser() {
+        if (!$this->currentUserId()) return null;
+        return $this->userModel->findById($this->currentUserId());
+    }
+
+    public function currentUserName() {
+        $user = $this->currentUser();
+        return $user['full_name'] ?? null;
+    }
+
+    public function currentUserEmail() {
+        $user = $this->currentUser();
+        return $user['email'] ?? null;
+    }
 }
