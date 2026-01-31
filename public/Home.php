@@ -25,8 +25,8 @@ if ($auth->currentUserRole() === 'admin') {
     <nav style="margin-top: 10px;">
       <a href="home.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Home</a>
       <a href="#" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Flights</a>
-      <a href="aboutus.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">About Us</a>
-      <a href="contactus.html" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Contact Us</a>
+      <a href="aboutus.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">About Us</a>
+      <a href="contactus.php" style="color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Contact Us</a>
       <a href="account.php" style="color: #ffeb3b; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">My Account</a>
       <a href="logout.php" style="color: #ffeb3b; text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;">Logout</a>
     </nav>

@@ -10,7 +10,6 @@ class MessageController {
     public function __construct() {
         $this->model = new MessageModel();
         $this->auth = new AuthController();
-        $this->auth->checkAdmin();
     }
 
     public function index() {
