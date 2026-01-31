@@ -34,5 +34,14 @@ class UserModel {
         $stmt = $this->conn->query("SELECT * FROM users ORDER BY created_at DESC");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function update($id, $fullName, $email, $role) {
+    $stmt = $this->conn->prepare("
+        UPDATE users
+        SET full_name = ?, email = ?, role = ?
+        WHERE id = ?
+    ");
+    return $stmt->execute([$fullName, $email, $role, $id]);
+}
 }
 ?>

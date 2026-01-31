@@ -4,8 +4,8 @@ require_once __DIR__ . '/AuthController.php';
 require_once __DIR__ . '/../helpers/validation.php';
 
 class UserController {
-    private $userModel;
-    private $auth;
+    public $userModel;
+    public $auth;
 
     public function __construct() {
         $this->userModel = new UserModel();

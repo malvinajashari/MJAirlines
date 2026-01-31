@@ -5,7 +5,7 @@ $auth = new AuthController();
 $auth->checkLogin();
 
 if ($auth->currentUserRole() === 'admin') {
-    header("Location: http://localhost:8888/MJAirlines/public/dashboard/admin.php");
+    header("Location: http://localhost/MJAirlines/public/dashboard/admin.php");
     exit();
 }
 ?>
@@ -26,6 +26,7 @@ if ($auth->currentUserRole() === 'admin') {
     <a href="#">Flights</a>
     <a href="aboutus.html">About Us</a>
     <a href="contactus.html">Contact Us</a>
+    <a href="account.php" class="account-btn">My Account</a>
     <a href="logout.php" class="logout-btn">Logout</a>
   </nav>
 

@@ -48,7 +48,8 @@
       background-position: center;
     }
 
-    .prev, .next {
+    .prev,
+    .next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -61,8 +62,13 @@
       z-index: 10;
     }
 
-    .prev { left: 10px; }
-    .next { right: 10px; }
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
 
     .content {
       padding: 40px;
@@ -99,7 +105,7 @@
     .dest-img {
       width: 45%;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .dest-text {
@@ -111,4 +117,26 @@
     .dest-text h3 {
       margin-top: 0;
       font-size: 1.6rem;
+    }
+
+
+    nav .account-btn,
+    nav .logout-btn {
+      background-color: #0073e6;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      margin-left: 10px;
+    }
+
+    nav .account-btn:hover,
+    nav .logout-btn:hover {
+      background-color: white;
+      color: #0073e6;
+      border: 2px solid #0073e6;
+      transform: scale(1.05);
     }

@@ -18,7 +18,7 @@ class AuthController {
 
         if (!isRequired($email) || !isEmail($email) || !isRequired($password)) {
             $_SESSION['error'] = "Invalid email or password";
-            header("Location: http://localhost:8888/MJAirlines/public/login.php");
+            header("Location: http://localhost/MJAirlines/public/login.php");
             exit();
         }
 
@@ -28,27 +28,27 @@ class AuthController {
             $_SESSION['role'] = strtolower($user['role']); // store role as lowercase
 
             if ($_SESSION['role'] === 'admin') {
-                header("Location: http://localhost:8888/MJAirlines/public/dashboard/admin.php");
+                header("Location: http://localhost/MJAirlines/public/dashboard/users.php");
             } else {
-                header("Location: http://localhost:8888/MJAirlines/public/home.php"); // normal user goes to home
+                header("Location: http://localhost/MJAirlines/public/home.php"); // normal user goes to home
             }
             exit();
         } else {
             $_SESSION['error'] = "Incorrect email or password";
-            header("Location: http://localhost:8888/MJAirlines/public/login.php");
+            header("Location: http://localhost/MJAirlines/public/login.php");
             exit();
         }
     }
 
     public function logout() {
         session_destroy();
-        header("Location: http://localhost:8888/MJAirlines/public/login.php");
+        header("Location: http://localhost/MJAirlines/public/login.php");
         exit();
     }
 
     public function checkLogin() {
         if (!isset($_SESSION['user_id'])) {
-            header("Location: http://localhost:8888/MJAirlines/public/login.php");
+            header("Location: http://localhost/MJAirlines/public/login.php");
             exit();
         }
     }
