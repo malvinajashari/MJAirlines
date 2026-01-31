@@ -3,11 +3,10 @@ require_once __DIR__ . '/../models/TicketModel.php';
 require_once __DIR__ . '/../helpers/validation.php';
 
 class TicketController {
-    private $ticketModel;
+    public $ticketModel;
 
     public function __construct() {
         $this->ticketModel = new TicketModel();
-        session_start();
     }
 
     public function bookTicket($userId, $flightId, $seatNumber) {
